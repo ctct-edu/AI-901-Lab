@@ -24,7 +24,7 @@ lab:
 
 それではエージェントを作成しましょう。
 
-1. Web ブラウザーで `https://ai.azure.com` の [Microsoft Foundry](https://ai.azure.com){:target="_blank"} を開き、Azure の資格情報を使用してサインインします。演習環境準備 (00) で作成したプロジェクトを選択します。
+1. Web ブラウザーで `https://ai.azure.com` の <a href="https://ai.azure.com" target="_blank">Microsoft Foundry</a> を開き、Azure の資格情報を使用してサインインします。演習環境準備 (00) で作成したプロジェクトを選択します。
 
 1. **エージェントの作成**（または **ビルド** ページの **エージェント** タブ）を選択し、`speech-agent` という名前の新しいエージェントを作成します。
 

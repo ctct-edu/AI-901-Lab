@@ -23,7 +23,7 @@ Azure Content Understanding は AI モデルを使用して、構造化されて
 
 ## 新しい Foundry ポータルでドキュメントから情報を抽出する
 
-1. Web ブラウザーで `https://ai.azure.com` の [Microsoft Foundry](https://ai.azure.com){:target="_blank"} を開き、Azure の資格情報を使用してサインインします。演習環境準備 (00) で作成したプロジェクトを選択します。
+1. Web ブラウザーで `https://ai.azure.com` の <a href="https://ai.azure.com" target="_blank">Microsoft Foundry</a> を開き、Azure の資格情報を使用してサインインします。演習環境準備 (00) で作成したプロジェクトを選択します。
 
 1. *新しい* Foundry ポータルで、画面上部のメニューから **ビルド** を選択します。
 2. 画面左側のメニューから **デプロイ** を選択します（メニュー下部の展開アイコンをクリックして展開する必要がある場合があります）。*デプロイ* ページの上部で **AI サービス** タブを選択します。
@@ -79,7 +79,7 @@ Azure Content Understanding は AI モデルを使用して、構造化されて
 
     変更が適用されたら **構成** パネルを閉じることができます。
 
-4. フル アナライザーを独自の請求書で試してみましょう。新しいブラウザー ウィンドウを開きます。次の URL を入力して **[contoso-invoice-1.pdf](https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/content-understanding/contoso-invoice-1.pdf){:target="_blank"}** をダウンロードします。`https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/content-understanding/contoso-invoice-1.pdf`
+4. フル アナライザーを独自の請求書で試してみましょう。新しいブラウザー ウィンドウを開きます。次の URL を入力して **<a href="https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/content-understanding/contoso-invoice-1.pdf" target="_blank">contoso-invoice-1.pdf</a>** をダウンロードします。`https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/content-understanding/contoso-invoice-1.pdf`
 
 5. **ファイルの参照** リンクを使用して、ダウンロードした **contoso-invoice-1.pdf** ドキュメントをアップロードします。**分析の実行** を選択して結果を確認します。テキストがレンダリングされるだけでなく、レイアウトが取得され、フィールドが体系的なカテゴリに整理されていることに注目してください。
 

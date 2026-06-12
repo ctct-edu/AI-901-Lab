@@ -23,7 +23,7 @@ lab:
 
 すべての生成 AI アプリまたはエージェントの中心には言語モデルがあります。通常は大規模言語モデル（LLM）ですが、場合によってはよりコンパクトな小規模言語モデル（SLM）が使用されることもあります。
 
-1. Web ブラウザーで `https://ai.azure.com` の [Microsoft Foundry](https://ai.azure.com){:target="_blank"} を開き、Azure の資格情報を使用してサインインします。演習環境準備 (00) で作成したプロジェクトを選択します。
+1. Web ブラウザーで `https://ai.azure.com` の <a href="https://ai.azure.com" target="_blank">Microsoft Foundry</a> を開き、Azure の資格情報を使用してサインインします。演習環境準備 (00) で作成したプロジェクトを選択します。
 
 1. 左側のナビゲーション ペインで **モデル** を選択して、Microsoft Foundry モデル カタログを表示します。
 
@@ -216,7 +216,7 @@ lab:
 
 エージェントは *ツール* を使用してタスクを実行したり情報を見つけたりします。一般的な Web 検索ツールやシンプルなファイル検索ツールを使用してナレッジ ソースを提供することも、より包括的なエージェント ソリューションとして *Microsoft Foundry IQ* ナレッジ ストアを作成して企業内の 1 つ以上のデータ ソースにエージェントを接続することもできます。この演習では、シンプルなファイル検索ツールを使用します。
 
-1. 新しいブラウザー タブを開き、`https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/expenses_policy.docx` の **[expenses_policy.docx](https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/expenses_policy.docx){:target="_blank"}** を表示します。これを経費精算に関する質問に回答するためにエージェントが使用するナレッジ ソースとして使用します。
+1. 新しいブラウザー タブを開き、`https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/expenses_policy.docx` の **<a href="https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/expenses_policy.docx" target="_blank">expenses_policy.docx</a>** を表示します。これを経費精算に関する質問に回答するためにエージェントが使用するナレッジ ソースとして使用します。
 1. **expenses_policy.docx** をローカル コンピューターにダウンロードします。
 1. エージェント プレイグラウンドを含むタブに戻り、左側のペインで **ツール** セクションをまだ展開していない場合は展開します。
 1. **expenses_policy.docx** ファイルをアップロードし、デフォルトのインデックス名で新しいインデックスを作成します。インデックスが作成されたら、エージェントにアタッチします。

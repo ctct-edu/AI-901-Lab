@@ -22,7 +22,7 @@ Foundry はテキスト分析に *2 つのアプローチ* を提供します。
 
 この演習の第 1 部では、*新しい* Foundry ポータルと汎用の言語モデルを使用して、自然言語プロンプトを通じてテキスト分析を実行します。言語モデルはプロンプトのみで幅広い種類のタスクを処理できます。
 
-1. Web ブラウザーで `https://ai.azure.com` の [Microsoft Foundry](https://ai.azure.com){:target="_blank"} を開き、Azure の資格情報を使用してサインインします。演習環境準備 (00) で作成したプロジェクトを選択します。
+1. Web ブラウザーで `https://ai.azure.com` の <a href="https://ai.azure.com" target="_blank">Microsoft Foundry</a> を開き、Azure の資格情報を使用してサインインします。演習環境準備 (00) で作成したプロジェクトを選択します。
 
 2. 左側のナビゲーション ペインで **モデル** を選択して Microsoft Foundry モデル カタログを表示します。
 

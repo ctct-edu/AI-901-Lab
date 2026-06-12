@@ -21,9 +21,9 @@ lab:
 
 コンピューター ビジョン モデルにより、AI システムは写真、動画、その他の視覚的な要素などの画像ベースのデータを解釈できます。この演習では、料理を志すシェフを助ける AI エージェントの開発者が、ビジョン対応モデルを使用して食材の画像を解釈し、関連するレシピを提案する方法を探索します。
 
-1. 新しいブラウザー タブで、`https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/images.zip` の **[images.zip](https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/images.zip){:target="_blank"}** をローカル コンピューターにダウンロードします。
+1. 新しいブラウザー タブで、`https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/images.zip` の **<a href="https://microsoftlearning.github.io/mslearn-ai-fundamentals/data/images.zip" target="_blank">images.zip</a>** をローカル コンピューターにダウンロードします。
 1. ダウンロードしたアーカイブをローカル フォルダーに展開して、含まれるファイルを確認します。これらのファイルが AI で分析する画像です。
-1. Web ブラウザーで `https://ai.azure.com` の [Microsoft Foundry](https://ai.azure.com){:target="_blank"} を開き、Azure の資格情報を使用してサインインします。演習環境準備 (00) で作成したプロジェクトを選択します。
+1. Web ブラウザーで `https://ai.azure.com` の <a href="https://ai.azure.com" target="_blank">Microsoft Foundry</a> を開き、Azure の資格情報を使用してサインインします。演習環境準備 (00) で作成したプロジェクトを選択します。
 1. 左側のナビゲーション ペインで **モデル** を選択して、Microsoft Foundry モデル カタログを表示します。
 1. `gpt-4.1-mini` モデルを検索し、**デプロイ** ボタンのドロップダウンから **既定の設定** を選択してデプロイします。デプロイには 1 分程度かかる場合があります。
 
