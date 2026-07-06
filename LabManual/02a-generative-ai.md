@@ -25,15 +25,15 @@ lab:
 
 1. Web ブラウザーで `https://ai.azure.com` の <a href="https://ai.azure.com" target="_blank">Microsoft Foundry</a> を開き、Azure の資格情報を使用してサインインします。演習環境準備 (00) で作成したプロジェクトを選択します。
 
-1. 左側のナビゲーション ペインで **モデル** を選択して、Microsoft Foundry モデル カタログを表示します。
+1. 画面上部のメニューで **[検出]** を選択して、移動した画面の左側のナビゲーション ペインで **モデル** を選択して、Microsoft Foundry モデル カタログを表示します。
 
     Microsoft Foundry は、AI アプリとエージェントで使用できる、Microsoft、OpenAI、その他のプロバイダーからの豊富なモデル コレクションを提供しています。
 
     ![AI Foundry モデル カタログのスクリーンショット。](./media/model-catalog.JPG)
 
-1. `gpt-4.1-mini` モデルを検索して選択し、その機能と特性が説明されたモデル ページを表示します。
+1. `gpt-5-mini` モデルを検索して選択し、その機能と特性が説明されたモデル ページを表示します。
 
-    ![gpt-4.1-mini モデル ページのスクリーンショット。](./media/gpt-4.1-mini-model.JPG)
+    ![gpt-5-mini モデル ページのスクリーンショット。](./media/gpt-5-mini-model.JPG)
 
 1. **デプロイ** ボタンのドロップダウンから **既定の設定** を選択してデフォルト設定でモデルをデプロイします。デプロイには 1 分程度かかる場合があります。
 
@@ -103,7 +103,7 @@ lab:
     from openai import OpenAI
     
     endpoint = "https://{your-foundry-resource}.openai.azure.com/openai/v1/"
-    deployment_name = "gpt-4.1-mini"
+    deployment_name = "gpt-5-mini"
     api_key = "<your-api-key>"
     
     client = OpenAI(
@@ -188,7 +188,7 @@ lab:
     created_at: 1776115196
     definition:
       kind: prompt
-      model: gpt-4.1-mini
+      model: gpt-5-mini
       instructions: あなたは従業員の経費精算をサポートする役立つ AI アシスタントです。経費に関連するトピックのみについて、簡潔で正確な情報を提供してください。経費に直接関連しないトピックについては情報を提供しないでください。
       temperature: 1
       top_p: 1
@@ -237,7 +237,7 @@ lab:
     created_at: 1776115782
     definition:
       kind: prompt
-      model: gpt-4.1-mini
+      model: gpt-5-mini
       instructions: あなたは従業員の経費精算をサポートする役立つ AI アシスタントです。経費に関連するトピックのみについて、簡潔で正確な情報を提供してください。経費に直接関連しないトピックについては情報を提供しないでください。
       temperature: 1
       top_p: 1
