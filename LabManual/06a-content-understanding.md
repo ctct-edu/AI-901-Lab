@@ -79,7 +79,7 @@ Azure Content Understanding は AI モデルを使用して、構造化されて
 
     変更が適用されたら **構成** パネルを閉じることができます。
 
-4. フル アナライザーを独自の請求書で試してみましょう。新しいブラウザー ウィンドウを開きます。次の URL を入力して **<a href="https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/content-understanding/contoso-invoice-1.pdf" target="_blank">contoso-invoice-1.pdf</a>** をダウンロードします。`https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-fundamentals/refs/heads/main/data/content-understanding/contoso-invoice-1.pdf`
+4. フル アナライザーを独自の請求書で試してみましょう。リポジトリ内の `data/06a-content-understanding/contoso-invoice-1.zip` から **<a href="../data/06a-content-understanding/contoso-invoice-1.zip" target="_blank">contoso-invoice-1.zip</a>** をダウンロードして展開し、**contoso-invoice-1.pdf** を使用します。
 
 5. **ファイルの参照** リンクを使用して、ダウンロードした **contoso-invoice-1.pdf** ドキュメントをアップロードします。**分析の実行** を選択して結果を確認します。テキストがレンダリングされるだけでなく、レイアウトが取得され、フィールドが体系的なカテゴリに整理されていることに注目してください。
 
