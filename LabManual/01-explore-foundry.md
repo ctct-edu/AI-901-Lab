@@ -116,7 +116,7 @@ Azure に Microsoft Foundry リソースが作成されたので、クライア�
 
 ## コンピューター ビジョンを体験する
 
-1. リポジトリ内の `data/01-explore-foundry/computers.zip` から **<a href="../data/01-explore-foundry/computers.zip" target="_blank">computers.zip</a>** をダウンロードし、ローカル コンピューターの任意のフォルダーに展開します。
+1. リポジトリ内の `data/01-explore-foundry/computers.zip` から **<a href="../data/01-explore-foundry/computers.zip?raw=true" target="_blank">computers.zip</a>** をダウンロードし、ローカル コンピューターの任意のフォルダーに展開します。
 
     > **ヒント**: <a href="https://www.bing.com/images/search?q=vintage+computers" target="_blank">Bing</a> でヴィンテージ コンピューターの画像を自分で検索することもできます。
 
@@ -128,7 +128,7 @@ Azure に Microsoft Foundry リソースが作成されたので、クライア�
 
 ## 情報抽出を体験する
 
-1. リポジトリ内の `data/01-explore-foundry/pcbs.zip` から **<a href="../data/01-explore-foundry/pcbs.zip" target="_blank">pcbs.zip</a>** をダウンロードし、ローカル コンピューターの任意のフォルダーに展開します。
+1. リポジトリ内の `data/01-explore-foundry/pcbs.zip` から **<a href="../data/01-explore-foundry/pcbs.zip?raw=true" target="_blank">pcbs.zip</a>** をダウンロードし、ローカル コンピューターの任意のフォルダーに展開します。
 
     > **ヒント**: <a href="https://www.bing.com/images/search?q=vintage-computer-component-serial-numbers" target="_blank">Bing</a> で自分の画像を検索することもできます。特定のヴィンテージ コンピューターのシリアル番号ラベルを検索してみてください。
 
