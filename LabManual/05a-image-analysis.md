@@ -23,7 +23,7 @@ lab:
 
 コンピューター ビジョン モデルにより、AI システムは写真、動画、その他の視覚的な要素などの画像ベースのデータを解釈できます。この演習では、料理を志すシェフを助ける AI エージェントの開発者が、ビジョン対応モデルを使用して食材の画像を解釈し、関連するレシピを提案する方法を探索します。
 
-1. リポジトリ内の `data/05a-image-analysis/images.zip` から **<a href="../data/05a-image-analysis/images.zip?raw=true" target="_blank">images.zip</a>** をローカル コンピューターにダウンロードします。
+1. リポジトリ内の `data/05a-image-analysis/images.zip` から **<a href="https://raw.githubusercontent.com/ctct-edu/AI-901-Lab/main/data/05a-image-analysis/images.zip" target="_blank">images.zip</a>** をローカル コンピューターにダウンロードします。
 
 1. ダウンロードしたアーカイブをローカル フォルダーに展開して、含まれるファイルを確認します。これらのファイルが AI で分析する画像です。
 

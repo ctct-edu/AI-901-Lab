@@ -213,7 +213,7 @@ lab:
 
 エージェントは *ツール* を使用してタスクを実行したり情報を見つけたりします。一般的な Web 検索ツールやシンプルなファイル検索ツールを使用してナレッジ ソースを提供することも、より包括的なエージェント ソリューションとして *Microsoft Foundry IQ* ナレッジ ストアを作成して企業内の 1 つ以上のデータ ソースにエージェントを接続することもできます。この演習では、シンプルなファイル検索ツールを使用します。
 
-1. リポジトリ内の `data/02a-generative-ai/expenses_policy.docx` から **<a href="../data/02a-generative-ai/expenses_policy.docx?raw=true" target="_blank">expenses_policy.docx</a>** を開きます。これを経費精算に関する質問に回答するためにエージェントが使用するナレッジ ソースとして使用します。
+1. リポジトリ内の `data/02a-generative-ai/expenses_policy.docx` から **<a href="https://raw.githubusercontent.com/ctct-edu/AI-901-Lab/main/data/02a-generative-ai/expenses_policy.docx" target="_blank">expenses_policy.docx</a>** を開きます。これを経費精算に関する質問に回答するためにエージェントが使用するナレッジ ソースとして使用します。
 1. **expenses_policy.docx** をローカル コンピューターにダウンロードします。
 1. エージェント プレイグラウンドを含むタブに戻り、左側のペインで **ツール** セクションをまだ展開していない場合は展開します。
 1. **expenses_policy.docx** ファイルをアップロードし、デフォルトのインデックス名で新しいインデックスを作成します。インデックスが作成されたら、エージェントにアタッチします。
