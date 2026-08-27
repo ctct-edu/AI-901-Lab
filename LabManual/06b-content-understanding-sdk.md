@@ -279,23 +279,6 @@ Content Understandingの利用可能リージョンを確認します。本教�
 
 元データの画質、向き、文字サイズ、フィールド説明を確認します。confidenceが高くても正しいとは限らないため、重要項目はsourceと原本を人が確認します。
 
-## 後片付け
-
-1. 自分が作成したカスタム画像アナライザーを削除します。
-
-    ```powershell
-    python src\06b-content-understanding-sdk\setup_image_analyzer.py --delete
-    ```
-
-1. 秘密情報と生成JSONを削除します。
-
-    ```powershell
-    Remove-Item src\06b-content-understanding-sdk\.env -ErrorAction SilentlyContinue
-    Remove-Item content-understanding-*.json -ErrorAction SilentlyContinue
-    ```
-
-1. 共有のFoundryリソース、06aで構成したモデル、リソースグループは削除しません。
-
 ## AI-901 試験範囲との対応
 
 この演習は、AI-901の次の要件に対応します。

@@ -31,14 +31,43 @@ lab:
 ## 前提条件
 
 - Windows 11、Visual Studio Code、PowerShell
-- 64-bit版Python 3.11
+- インストール済みの64-bit版Python 3.11
 - [演習環境準備（00）](./00-create-project.md)で作成したMicrosoft Foundryプロジェクト
 - Foundryプロジェクトに関連付けられたFoundryリソースを確認できるAzure権限
-- このリポジトリをローカルに保存し、リポジトリのルートフォルダーをVisual Studio Codeで開いていること
 
 > **重要**: この演習で使うのは、プロジェクトの管理に使う **Project endpoint** ではなく、Azure Languageを含むFoundryリソースの **サービス用エンドポイント** です。
 
 ## 演習
+
+### Task 0: リポジトリをローカルに保存してVisual Studio Codeで開く
+
+最初に、すべてのPython演習で使用するファイルをGitHubからローカルPCへ保存します。この作業は03cで一度だけ実施します。04b以降の演習では、ここで開いた同じフォルダーを引き続き使用します。
+
+1. Visual Studio Codeを起動します。
+1. **表示** > **コマンド パレット** を選択します。キーボードでは `Ctrl` + `Shift` + `P` でも開けます。
+1. コマンドパレットに `Git: Clone` と入力し、表示された **Git: Clone** を選択します。
+1. リポジトリのURLとして次の値を入力し、`Enter`キーを押します。
+
+    ```text
+    https://github.com/ctct-edu/AI-901-Lab.git
+    ```
+
+1. 保存先を選択します。選択した場所の中に `AI-901-Lab` フォルダーが自動的に作成されます。
+1. 複製が完了したら、画面右下または上部に表示される **開く**（Open）を選択します。確認画面が表示された場合は、複製した `AI-901-Lab` フォルダーを開きます。
+1. Visual Studio Code左側の **エクスプローラー** を開き、次のフォルダーが表示されることを確認します。
+
+    ```text
+    AI-901-Lab
+    ├─ LabManual
+    ├─ data
+    └─ src
+       ├─ 03c-text-analysis-sdk
+       ├─ 04b-speech-sdk
+       ├─ 05b-vision-app
+       └─ 06b-content-understanding-sdk
+    ```
+
+> **確認ポイント**: エクスプローラー最上部に `AI-901-Lab` が表示され、`LabManual`、`data`、`src` を展開できれば準備完了です。
 
 ### Task 1: Azure Languageの接続情報を確認する
 
@@ -47,10 +76,10 @@ lab:
 1. [Azure portal](https://portal.azure.com) を別のタブで開きます。
 1. 上部の検索欄にFoundryリソース名を入力し、対象リソースを開きます。
 1. 左側のメニューで **リソース管理** > **キーとエンドポイント** を開きます。表示名はポータル更新により **キーとエンドポイント** または **Keys and Endpoint** の場合があります。
-1. `KEY 1` とサービス用エンドポイントを一時的にメモします。エンドポイントは通常、次の形式です。
+1. `キー 1` とサービス用エンドポイントを一時的にメモします。エンドポイントは通常、次の形式です。
 
     ```text
-    https://<リソース名>.cognitiveservices.azure.com/
+    https://<リソース名>.services.ai.azure.com/
     ```
 
 次のようなProject endpointは、このプログラムには使用しません。
@@ -65,18 +94,17 @@ Project endpointを指定すると、認証に成功してもLanguage APIのパ�
 
 1. Visual Studio Codeで **ターミナル** > **新しいターミナル** を選択します。
 1. ターミナル左側に `PS` と表示され、現在位置がリポジトリのルートであることを確認します。
-1. 次のコマンドを1行ずつ実行します。
+1. Python 3.11以降が使用されることを確認し、続けて仮想環境の作成と必要なライブラリのインストールを行います。次のコマンドを1行ずつ実行します。
 
     ```powershell
-    py -3.11 -m venv .venv
+    python --version
+    python -m venv .venv
     .\.venv\Scripts\Activate.ps1
     python -m pip install --upgrade pip
     python -m pip install -r src\03c-text-analysis-sdk\requirements.txt
     ```
 
-    コマンド先頭に `(.venv)` と表示されれば、仮想環境が有効です。
-
-> **`py` が見つからない場合**: Python 3.11をインストールし、インストーラーの **Install launcher for all users** と **Add python.exe to PATH** を有効にします。会社管理PCでは講師に確認してください。
+    最初のコマンドで `Python 3.11.x` と表示され、以降のコマンド先頭に `(.venv)` と表示されれば、仮想環境が有効です。本研修ではPython 3.11がインストール済みであることを前提とします。コマンドを実行できない場合は、講師に確認してください。
 
 ### Task 3: `.env` ファイルを設定する
 
@@ -90,7 +118,7 @@ Project endpointを指定すると、認証に成功してもLanguage APIのパ�
 1. Task 1で確認した値を設定します。`YOUR-...` を残さないでください。
 
     ```dotenv
-    LANGUAGE_ENDPOINT=https://<リソース名>.cognitiveservices.azure.com
+    LANGUAGE_ENDPOINT=https://<リソース名>.services.ai.azure.com
     LANGUAGE_KEY=<KEY 1の値>
     ```
 
@@ -100,9 +128,9 @@ Project endpointを指定すると、認証に成功してもLanguage APIのパ�
 
 ### Task 4: 入力データとstarterを確認する
 
-1. [review.txt](../data/03c-text-analysis-sdk/review.txt)を開きます。
+1. \data\03c-text-analysis-sdkフォルダ内にある[review.txt](../data/03c-text-analysis-sdk/review.txt)を開きます。
 1. 肯定的な表現、否定的な表現、場所、人物名、メールアドレス、電話番号を探します。
-1. [starterのtext_analysis_app.py](../src/03c-text-analysis-sdk/starter/text_analysis_app.py)を開きます。
+1. starterフォルダ内にある[text_analysis_app.py](../src/03c-text-analysis-sdk/starter/text_analysis_app.py)を開きます。
 1. 次の役割を持つ部分を確認します。
 
     - `load_settings`: `.env` から接続情報を読み込む
@@ -184,7 +212,7 @@ starterの `analyze_review` 関数にある3行のコメントと `raise NotImpl
 
 ### Task 6: プログラムを実行する
 
-1. starterを実行します。
+1. starterを実行します。以下のコマンドをターミナルで実行します。
 
     ```powershell
     python src\03c-text-analysis-sdk\starter\text_analysis_app.py --input data\03c-text-analysis-sdk\review.txt
@@ -270,18 +298,6 @@ starterの `analyze_review` 関数にある3行のコメントと `raise NotImpl
 ### 一部のPIIや固有表現が検出されない
 
 AIの結果は完全ではありません。対象言語でその機能がサポートされているかを公式ドキュメントで確認し、業務利用時は信頼度、ルール、人による確認を組み合わせます。PII検出結果だけで安全性を保証しないでください。
-
-## 後片付け
-
-1. 秘密情報を含む `.env` と、生成したJSONを削除します。
-
-    ```powershell
-    Remove-Item src\03c-text-analysis-sdk\.env -ErrorAction SilentlyContinue
-    Remove-Item analysis-result.json -ErrorAction SilentlyContinue
-    ```
-
-1. 続けて別の演習を行う場合、共有のFoundryリソースやプロジェクトは削除しません。
-1. 研修全体を終了し、講師から削除を指示された場合だけ、演習環境準備（00）の手順に従ってリソースグループを削除します。
 
 ## AI-901 試験範囲との対応
 

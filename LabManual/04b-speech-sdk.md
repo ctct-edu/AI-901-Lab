@@ -32,13 +32,6 @@ lab:
 - 64-bit版Python 3.11
 - [演習環境準備（00）](./00-create-project.md)で作成したMicrosoft Foundryプロジェクト
 - Foundryリソースのキーとリージョンを確認できるAzure権限
-- 03cで作成したリポジトリ直下の `.venv`。03cを実施していない場合は、次のコマンドで作成します。
-
-    ```powershell
-    py -3.11 -m venv .venv
-    ```
-
-マイク演習は発展課題です。マイクがない、または権限を変更できない研修環境でも、本編のWAV認識と音声合成を完了できます。
 
 ## 演習
 
@@ -183,16 +176,6 @@ starterの `synthesize_text` 関数内にあるコメントと `raise NotImpleme
 1. `ja-JP-NanamiNeural` の日本語音声で読み上げられることを確認します。
 1. 別の短い文章でも試します。個人情報や社外秘を入力しないでください。
 
-### 発展課題: マイクから認識する
-
-利用者の同意を得て、録音が許可された環境でだけ実施します。
-
-```powershell
-python src\04b-speech-sdk\solution\speech_app.py microphone
-```
-
-Windowsの **設定** > **プライバシーとセキュリティ** > **マイク** で、デスクトップアプリのマイク利用が許可されている必要があります。録音された音声を保存・共有する場合は、目的、保管期間、閲覧者、削除方法を事前に定めてください。
-
 ## 実行結果例
 
 音声認識:
@@ -231,19 +214,6 @@ MP3やM4Aを拡張子だけ変更してもWAVにはなりません。用意さ�
 - `East US` を `eastus` のようなリージョン識別子にします。
 - プロキシやファイアウォールでSpeechサービスへの通信が遮断されていないか確認します。
 - `error_details` に表示される内容を確認します。キー自体はエラー報告へ貼り付けません。
-
-### マイクが動作しない
-
-既定の録音デバイス、Windowsのマイク権限、リモートデスクトップの音声入力転送を確認します。研修用VMにマイクがない場合は発展課題をスキップします。
-
-## 後片付け
-
-```powershell
-Remove-Item src\04b-speech-sdk\.env -ErrorAction SilentlyContinue
-Remove-Item output.wav -ErrorAction SilentlyContinue
-```
-
-続けて演習する場合はFoundryリソースを残します。独自に録音したファイルがある場合は、研修の保管方針に従って削除します。
 
 ## AI-901 試験範囲との対応
 

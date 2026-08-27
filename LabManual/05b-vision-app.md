@@ -253,15 +253,6 @@ base URLとAPI keyが同じリソースのものか確認します。キーを�
 
 マルチモーダルモデルは画像にない情報を推測したり、小さい文字を誤読したりする場合があります。安全判断、本人確認、品質検査を自動確定せず、元画像と人による確認を残します。
 
-## 後片付け
-
-```powershell
-Remove-Item src\05b-vision-app\.env -ErrorAction SilentlyContinue
-Remove-Item vision-analysis.json -ErrorAction SilentlyContinue
-```
-
-`data/05a-image-analysis/extracted` は秘密情報を含まない教材画像ですが、ディスク容量を戻したい場合は削除できます。共有のFoundryリソースとモデルデプロイは、続く演習で使うため残します。
-
 ## AI-901 試験範囲との対応
 
 この演習は、AI-901の「画像を分析する軽量アプリケーションを作成する」に対応します。画像入力、マルチモーダルモデル、構造化出力、専用Computer Visionとの使い分け、画像利用に関する責任あるAIを実践します。
