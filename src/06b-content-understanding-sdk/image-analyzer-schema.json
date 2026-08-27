@@ -1,0 +1,31 @@
+{
+  "description": "AI-901 equipment label analyzer",
+  "baseAnalyzerId": "prebuilt-image",
+  "models": {
+    "completion": "gpt-5.2"
+  },
+  "fieldSchema": {
+    "fields": {
+      "manufacturer": {
+        "type": "string",
+        "method": "extract",
+        "description": "Name of the equipment manufacturer"
+      },
+      "model": {
+        "type": "string",
+        "method": "extract",
+        "description": "Equipment model name or model number"
+      },
+      "serial_number": {
+        "type": "string",
+        "method": "extract",
+        "description": "Equipment serial number"
+      },
+      "warning": {
+        "type": "string",
+        "method": "extract",
+        "description": "Safety warning written on the equipment"
+      }
+    }
+  }
+}

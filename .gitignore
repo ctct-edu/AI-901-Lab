@@ -1,0 +1,10 @@
+.venv/
+**/.env
+__pycache__/
+.pytest_cache/
+*.py[cod]
+**/extracted/
+analysis-result.json
+vision-analysis.json
+content-understanding-*.json
+output.wav
