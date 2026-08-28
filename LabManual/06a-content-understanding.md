@@ -30,11 +30,9 @@ Azure Content Understanding は AI モデルを使用して、構造化されて
 
     ![新しい Foundry ポータルの AI サービス一覧のスクリーンショット。](./media/ai-services.JPG)
 
-3. 一覧から **コンテンツの解釈** を選択してプレイグラウンドを開きます。
+3. 一覧から **Content Understanding - OCR 読み取りアナライザー** を選択してプレイグラウンドを開きます。
 
-    `コンテンツの解釈` プレイグラウンドでは、**モダリティ** ドロップダウンを使用して分析するコンテンツの種類と機能を選択します。
-
-    ![コンテンツの解釈プレイグラウンドのスクリーンショット。](./media/content-understanding-main.JPG)
+    `コンテンツの解釈(Content Understanding)` プレイグラウンドでは、**モダリティ** ドロップダウンを使用して分析するコンテンツの種類と機能を選択します。
 
 #### Content Understanding の *Read* 機能を試す
 
@@ -82,8 +80,6 @@ Azure Content Understanding は AI モデルを使用して、構造化されて
 4. フル アナライザーを独自の請求書で試してみましょう。リポジトリ内の `data/06a-content-understanding/contoso-invoice-1.zip` から **<a href="https://raw.githubusercontent.com/ctct-edu/AI-901-Lab/main/data/06a-content-understanding/contoso-invoice-1.zip" target="_blank">contoso-invoice-1.zip</a>** をダウンロードして展開し、**contoso-invoice-1.pdf** を使用します。
 
 5. **ファイルの参照** リンクを使用して、ダウンロードした **contoso-invoice-1.pdf** ドキュメントをアップロードします。**分析の実行** を選択して結果を確認します。テキストがレンダリングされるだけでなく、レイアウトが取得され、フィールドが体系的なカテゴリに整理されていることに注目してください。
-
-    ![Document fields アナライザーを使用した Contoso 請求書の分析結果のスクリーンショット。](./media/content-understanding-model-deploy.JPG)
 
 6. 抽出されたフィールドが表示されている右側のペインで、**結果** タブを選択して JSON の生の結果を表示します。使用されたアナライザーの種類が含まれている **analyzerID** フィールドを確認します。組み込みの Content Understanding アナライザーのリストは[こちら](https://learn.microsoft.com/azure/ai-services/content-understanding/concepts/prebuilt-analyzers)で確認できます。
 
