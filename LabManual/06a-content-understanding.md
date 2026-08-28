@@ -28,8 +28,6 @@ Azure Content Understanding は AI モデルを使用して、構造化されて
 1. *新しい* Foundry ポータルで、画面上部のメニューから **ビルド** を選択します。
 2. 画面左側のメニューから **サービス** を選択します。
 
-    ![新しい Foundry ポータルの AI サービス一覧のスクリーンショット。](./media/ai-services.JPG)
-
 3. 一覧から **Content Understanding - OCR 読み取りアナライザー** を選択してプレイグラウンドを開きます。
 
     `コンテンツの解釈(Content Understanding)` プレイグラウンドでは、**モダリティ** ドロップダウンを使用して分析するコンテンツの種類と機能を選択します。
