@@ -73,9 +73,9 @@ lab:
 
 ### Task 3: 入力WAVとstarterを確認する
 
-1. [ai-introduction.wav](../data/04b-speech-sdk/ai-introduction.wav)をWindowsのメディアプレーヤーで再生します。
+1. [/data/04b-speech-sdk/ai-introduction.wav](../data/04b-speech-sdk/ai-introduction.wav)をWindowsのメディアプレーヤーで再生します。
 1. 約15秒の日本語音声であることを確認します。このファイルは、研修用の架空原稿を音声合成して作ったものです。
-1. [starterのspeech_app.py](../src/04b-speech-sdk/starter/speech_app.py)を開きます。
+1. starterの[speech_app.py](../src/04b-speech-sdk/starter/speech_app.py)を開きます。
 1. `Settings` にはキー、リージョン、認識言語、合成音声がまとめられています。
 1. `create_speech_config` では1つの設定を認識と合成の両方に使います。
 
