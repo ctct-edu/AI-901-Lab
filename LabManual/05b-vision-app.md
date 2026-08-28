@@ -90,11 +90,11 @@ AZURE_OPENAI_API_KEY=<API key>
 AZURE_OPENAI_DEPLOYMENT=gpt-5-mini
 ```
 
-URL末尾の `/openai/v1/` を省略しないでください。API keyは画面共有、チャット、提出物へ含めません。
+URL末尾の `/openai/v1/` を省略しないでください。
 
 ### Task 4: データ変換と出力モデルを確認する
 
-[starterのvision_app.py](../src/05b-vision-app/starter/vision_app.py)を開きます。
+starterフォルダ内の[vision_app.py](../src/05b-vision-app/starter/vision_app.py)を開きます。
 
 `detect_media_type` は拡張子から `image/png` または `image/jpeg` を選びます。`encode_image` は画像のバイト列をBase64にし、次のようなdata URIへ変換します。
 
@@ -203,12 +203,12 @@ python src\05b-vision-app\solution\vision_app.py --input data\05a-image-analysis
 ```json
 {
   "objects": [
-    "食材",
-    "調理器具"
+    "バナナ",
+    "ベージュの布（テクスチャのある背景）"
   ],
-  "scene": "キッチンの作業台に食材が並んでいます。",
+  "scene": "ベージュの布の上に単体のバナナが置かれたクローズアップの静物写真。バナナは画面中央からやや右寄りに配置されている。全体的に均一な照明で影が薄く見える。",
   "text": [],
-  "safety_concern": "画像だけでは衛生状態を確定できません。"
+  "safety_concern": ""
 }
 ```
 
