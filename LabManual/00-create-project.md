@@ -17,11 +17,22 @@ lab:
 
 > **注**: Microsoft Foundry ポータルを含む Microsoft Foundry の多くのコンポーネントは継続的に開発されています。これは人工知能技術の急速な進歩を反映しています。ユーザー エクスペリエンスの一部の要素が、この演習の画像や説明と異なる場合があります。
 
+## Azure Portalへのサインイン
+
+Microsoft Foundryでの操作を実施する前に、Azure Portalへのサインインを実施して多要素認証(MFA)の設定を実施します。現在、Microsoft Foundryを使用自体にはMFAを要求されませんが、Foundryプロジェクトおよびそのリソースを作成するためには、MFA設定済みのユーザーを使用する必要があります。
+
+1.  Web ブラウザーをInPrivateウィンドウ（シークレットウィンドウ）で開き、[Azure Portal](https://portal.azure.com/)にアクセスします。
+2. ユーザー名、パスワードは講師から配布されたAzureの資格情報を使用してサインインを実施します。
+3. **アカウントをセキュリティ保護しましょう** が表示されたら、指示に従って **Microsoft Authenticator** を使用した多要素認証の登録を進めます。
+   お手持ちのスマートフォンにインストールされたMicrosoft AuthenticatorにてQRコードを読み取ります。QRコードは **次へ** を数回クリックすると表示されます。
+4. スマートフォン上にアカウント情報が登録されたらQRコードが表示されているブラウザ画面で **次へ** をクリックして、表示された数字をスマートフォンに通知された画面で入力してMFA登録を完了します。
+5. **Authenticator Added** と表示されれば作業は完了です。途中でタイムアウトなどで失敗する場合は、一度ウィンドウを閉じてAzure Portalへのアクセス、サインインから再度実行します。
+
 ## Microsoft Foundry プロジェクトの作成
 
 Microsoft Foundry は *プロジェクト* を使用して、AI ソリューションの開発に使用するモデル、リソース、データ、その他のアセットを整理します。プロジェクトは Azure の *Microsoft Foundry* リソースに関連付けられており、Azure 上での AI アプリとエージェント開発をサポートするために必要なクラウド サービスを提供します。
 
-1. Web ブラウザーをInPrivateウィンドウ（シークレットウィンドウ）で開き、 <a href="https://ai.azure.com" target="_blank">Microsoft Foundry</a> (https://ai.azure.com)にアクセスします。
+1. Web ブラウザーで新しいタブをInPrivateウィンドウ（シークレットウィンドウ）で開き、 <a href="https://ai.azure.com" target="_blank">Microsoft Foundry</a> (https://ai.azure.com)にアクセスします。
 
     画面右上にある　**[Sign in]** をクリックして、Azure の資格情報を使用してサインインします。 
 
