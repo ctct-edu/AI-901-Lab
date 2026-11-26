@@ -33,11 +33,11 @@ lab:
 
        Microsoft Foundry は、AI アプリとエージェントで使用できる、Microsoft、OpenAI、その他のプロバイダーからの豊富なモデル コレクションを提供しています。
 
-       ![AI Foundry モデル カタログのスクリーンショット。](C:/Users/azureadmin/Documents/GitHub/AI-901-Lab/LabManual/media/model-catalog.png)
+       ![AI Foundry モデル カタログのスクリーンショット。](./media/model-catalog.png)
 
     1. `gpt-6-luna` モデルを検索して選択し、その機能と特性が説明されたモデル ページを表示します。
 
-       ![](C:/Users/azureadmin/Documents/GitHub/AI-901-Lab/LabManual/media/gpt-6-luna-model.png)
+       ![](./media/gpt-6-luna-model.png)
 
     1. **デプロイ** ボタンの **カスタム設定** （または**カスタムデプロイ**）から**1 分あたりのトークン数レート制限** を **[50,000]** に設定してモデルをデプロイします。デプロイには 1 分程度かかる場合があります。
 
