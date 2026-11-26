@@ -25,31 +25,30 @@ Azure Content Understanding は AI モデルを使用して、構造化されて
 
 1. Web ブラウザーで `https://ai.azure.com` の <a href="https://ai.azure.com" target="_blank">Microsoft Foundry</a> を開き、Azure の資格情報を使用してサインインします。演習環境準備 (00) で作成したプロジェクトを選択します。
 
-1. *新しい* Foundry ポータルで、画面上部のメニューから **ビルド** を選択します。
-2. 画面左側のメニューから **サービス** を選択します。
+2. *新しい* Foundry ポータルで、画面上部のメニューから **ビルド** を選択します。
+3. 画面左側のメニューから **サービス** を選択します。
 
-3. 一覧から **Content Understanding - OCR 読み取りアナライザー** を選択してプレイグラウンドを開きます。
+4. 一覧から **Document Intelligence and Content Understanding** のタイルを選択します。
 
-    `コンテンツの解釈(Content Understanding)` プレイグラウンドでは、**モダリティ** ドロップダウンを使用して分析するコンテンツの種類と機能を選択します。
+5. 一覧から **> Content extraction** の項目を展開し、 **OCR (Read)** を選択します。
 
 #### Content Understanding の *Read* 機能を試す
 
 *Read* 機能はコンテンツ理解の最初のステップで、テキストを読んで抽出しますが、まだ構造や意味の理解は試みません。
 
-1. **モダリティ** ドロップダウンから **ドキュメント** を選択します。
-2. 次に表示されるドロップダウンから **OCR/読み取り** を選択します。
+1. **Category** ドロップダウンから **Content extraction** 、 **Prebuilt** ドロップダウンから **OCR (Read)** が選択されていることを確認します。
 
-3. サンプルの **read_barcode.pdf** を選択し、**分析の実行** ボタンを使用してドキュメントから情報を抽出します。分析が完了したら結果を確認します。
+2. サンプルの **read_barcode.pdf** を選択し、**▶Run** ボタンを使用してドキュメントから情報を抽出します。分析が完了したら結果を確認します。
 
     ![サンプル請求書の分析結果のスクリーンショット。](./media/content-understanding-read.JPG)
 
-4. 次の機能を試すには、ドロップダウンから別のアナライザーを選択します。
+3. 次の機能を試すには、ドロップダウンから別のアナライザーを選択します。
 
 #### Content Understanding の *Layout* 機能を試す
 
-1. **モダリティ** ドロップダウンで **ドキュメント** のまま、次のドロップダウンから **レイアウト** を選択します。
+1. **Category** ドロップダウンは **Content extraction** のまま、 **Prebuilt** ドロップダウンを **レイアウト** に変更します。
 
-2. サンプルの **layout_checklist.jpg** を選択し、**分析の実行** ボタンを使用してそこから情報を抽出します。分析が完了したら結果を確認します。
+2. サンプルの **layout_checklist.jpg** を選択し、**▶Run** ボタンを使用して情報を抽出します。分析が完了したら結果を確認します。
 
     ![レイアウト チェックリストの分析結果のスクリーンショット。](./media/content-understanding-layout.JPG)
 
@@ -61,35 +60,27 @@ Azure Content Understanding は AI モデルを使用して、構造化されて
 
 #### Content Understanding のその他のアナライザー機能を試す
 
-1. 次のドロップダウンから **ドキュメントのフィールド** を選択します。Azure Content Understanding の別のアナライザーをテストします。
+1. **Category** ドロップダウンから **General document extraction** を選択します。**Prebuilt** のドロップダウンが **ドキュメントのフィールド** となっていることを確認します。
 
-2. **モデル デプロイが必要** ダイアログが表示された場合は、**モデルのデプロイ** を選択します。
+2. **モデル デプロイが必要(Model setup needed.)** ダイアログが表示された場合は、ダイアログ右端の **Set model defaults（デフォルトモデルのデプロイ）** を選択します。
 
-    ![モデルのデプロイが必要なダイアログのスクリーンショット。](./media/content-understanding-model-deploy.JPG)
+3. 右側の **Default model deployments** パネルが開きます。**ドキュメントのフィールド アナライザー** には追加のモデル デプロイが必要です。**チャット補完モデル** と **チャット補完モデル(mini)** 、 **埋め込みモデル** のドロップダウンから推奨モデルを選択します。次に **変更の適用** を選択します。
 
-3. 右側の **構成** パネルが開きます。**ドキュメントのフィールド アナライザー** には追加のモデル デプロイが必要です。**チャット補完モデル** と **埋め込みモデル** のドロップダウンから推奨モデルを選択します。次に **変更の適用** を選択します。
-
-    ![構成パネルでモデルを選択するスクリーンショット。](./media/content-understanding-model-config.JPG)
+    ![構成パネルでモデルを選択するスクリーンショット。](./media/content-understanding-model-config.PNG)
 
     >**ヒント**: *ドキュメントのフィールド* やその他の複雑な抽出ニーズには、複数の AI モデルのデプロイが必要です。各デプロイは特定のモデル バージョンまたは機能に紐付けられているためです。Azure AI Foundry で複数のモデルを使用することで、さまざまな種類の処理タスクをより効果的に処理でき、各ニーズに適切なモデルを選択する柔軟性が得られます。
 
-    変更が適用されたら **構成** パネルを閉じることができます。
+4. 選択（デプロイ）が完了したら **Save defaults** をクリックして設定を保存します。
 
-4. フル アナライザーを独自の請求書で試してみましょう。リポジトリ内の `data/06a-content-understanding/contoso-invoice-1.zip` から **<a href="https://raw.githubusercontent.com/ctct-edu/AI-901-Lab/main/data/06a-content-understanding/contoso-invoice-1.zip" target="_blank">contoso-invoice-1.zip</a>** をダウンロードして展開し、**contoso-invoice-1.pdf** を使用します。
+5. フル アナライザーを独自の請求書で試してみましょう。リポジトリ内の `data/06a-content-understanding/contoso-invoice-1.zip` から **<a href="https://raw.githubusercontent.com/ctct-edu/AI-901-Lab/main/data/06a-content-understanding/contoso-invoice-1.zip" target="_blank">contoso-invoice-1.zip</a>** をダウンロードして展開し、**contoso-invoice-1.pdf** を使用します。
 
-5. **ファイルの参照** リンクを使用して、ダウンロードした **contoso-invoice-1.pdf** ドキュメントをアップロードします。**分析の実行** を選択して結果を確認します。テキストがレンダリングされるだけでなく、レイアウトが取得され、フィールドが体系的なカテゴリに整理されていることに注目してください。
+6. **ファイルの参照** リンクを使用して、ダウンロードした **contoso-invoice-1.pdf** ドキュメントをアップロードします。**▶Run** を選択して結果を確認します。テキストがレンダリングされるだけでなく、レイアウトが取得され、フィールドが体系的なカテゴリに整理されていることに注目してください。
 
-6. 抽出されたフィールドが表示されている右側のペインで、**結果** タブを選択して JSON の生の結果を表示します。使用されたアナライザーの種類が含まれている **analyzerID** フィールドを確認します。組み込みの Content Understanding アナライザーのリストは[こちら](https://learn.microsoft.com/azure/ai-services/content-understanding/concepts/prebuilt-analyzers)で確認できます。
+7. 抽出されたフィールドが表示されている右側のペインで、**結果** タブを選択して JSON の生の結果を表示します。使用されたアナライザーの種類が含まれている **analyzerID** フィールドを確認します。組み込みの Content Understanding アナライザーのリストは[こちら](https://learn.microsoft.com/azure/ai-services/content-understanding/concepts/prebuilt-analyzers)で確認できます。
 
      ![Document アナライザーを使用した請求書分析の JSON 結果のスクリーンショット。](./media/content-understanding-layout-json.png)
 
 >**ヒント**: *フィールド* タブは *結果* タブの生の JSON からの情報をユーザーにわかりやすい形で表示していることを覚えておいてください。
-
-## Python SDK を使用してコンテンツを抽出する方法を理解する
-
-1. または、開発者はコードを使用してドキュメントを *ドキュメントのフィールド* アナライザーに送信することもできます。Foundry プレイグラウンドはコード サンプルを提供しています。**コード** タブを選択して、この応答を処理して抽出されたフィールドを活用するために使用できるコードを確認します。
-
-    ![Foundry プレイグラウンドで提供されているサンプル コードのスクリーンショット。](./media/content-understanding-code-example.png)
 
 ## まとめ
 

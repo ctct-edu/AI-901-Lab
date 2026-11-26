@@ -24,17 +24,25 @@ Foundry はテキスト分析に *2 つのアプローチ* を提供します。
 
 この演習の第 1 部では、*新しい* Foundry ポータルと汎用の言語モデルを使用して、自然言語プロンプトを通じてテキスト分析を実行します。言語モデルはプロンプトのみで幅広い種類のタスクを処理できます。
 
-1. Web ブラウザーで `https://ai.azure.com` の <a href="https://ai.azure.com" target="_blank">Microsoft Foundry</a> を開き、Azure の資格情報を使用してサインインします。演習環境準備 (00) で作成したプロジェクトを選択します。
+1. Web ブラウザーで、`https://ai.azure.com` の <a href="https://ai.azure.com" target="_blank">Microsoft Foundry</a> を開き、Azure の資格情報を使用してサインインします。デプロイ可能なモデルや利用可能なエージェントの確認を行う場合は、画面上部のメニューで **[ビルド]** を選択します。
 
-2. 画面上部のメニューで **[検出]** を選択して、移動した画面の左側のナビゲーション ペインで **モデル** を選択して Microsoft Foundry モデル カタログを表示します。
+2. 左側のナビゲーション ペインで **カタログ** を選択して、Microsoft Foundry モデル カタログを表示します。画面上部の **モデル** タブに切り替えることで使用可能な基盤モデルの一覧を確認することができます。
 
-    ![AI Foundry モデル カタログのスクリーンショット。](./media/model-catalog.JPG)
+    Microsoft Foundry は、AI アプリとエージェントで使用できる、Microsoft、OpenAI、その他のプロバイダーからの豊富なモデル コレクションを提供しています。
 
-3. `gpt-5-mini` モデルを検索して選択し、その機能と特性が説明されたモデル ページを表示します。
+    ![AI Foundry モデル カタログのスクリーンショット。](C:/Users/azureadmin/Documents/GitHub/AI-901-Lab/LabManual/media/model-catalog.png)
 
-    ![gpt-5-mini モデル ページのスクリーンショット。](./media/gpt-5-mini-model.JPG)
+3. `gpt-6-luna` モデルを検索して選択し、その機能と特性が説明されたモデル ページを表示します。
 
-3. West US3でプロジェクトがデプロイされている場合はインスタントアクセスモデルが使用できるため、そのまま **プレイグラウンドで開く** ボタンからプレイグラウンドへ進みます。それ以外のリージョンでデプロイされている場合は、 **カスタムデプロイ** ボタンから**1 分あたりのトークン数レート制限** を **[50,000]** に設定してモデルをデプロイします。デプロイには 1 分程度かかる場合があります。デプロイが完了するまで待ちます。デプロイが完了すると、チャット プレイグラウンドに移動し、モデルの機能をテストできます。
+    ![](C:/Users/azureadmin/Documents/GitHub/AI-901-Lab/LabManual/media/gpt-6-luna-model.png)
+
+4. **デプロイ** ボタンの **カスタム設定** （または**カスタムデプロイ**）から**1 分あたりのトークン数レート制限** を **[50,000]** に設定してモデルをデプロイします。デプロイには 1 分程度かかる場合があります。
+
+    > **ヒント**: モデルのデプロイはリージョン クォータの制約を受けます。プロジェクトのリージョンでモデルをデプロイするのに十分なクォータがない場合は、別のモデルを使用できます。または、別のリージョンに新しいプロジェクトを作成することもできます。
+
+5. モデルがデプロイされたら、開いたモデル プレイグラウンド ページでモデルとチャットできます。
+
+    ![モデル プレイグラウンドのスクリーンショット。](./media/model-playground.png)
 
 ### 感情分析
 
@@ -68,7 +76,7 @@ Foundry はテキスト分析に *2 つのアプローチ* を提供します。
 
 **固有表現** とは、テキスト内で言及されている人物、場所、日付、その他の重要な項目です。
 
-1. チャット ペインの上部にある **New chat**（&#128172;）ボタンを使用して会話を再開します。これにより会話履歴がすべて削除されます。
+1. チャット ペインの上部にある **New chat（新しいチャット）**（&#128172;）ボタンを使用して会話を再開します。これにより会話履歴がすべて削除されます。
 
 2. 次のプロンプトを入力して結果を確認します。
 
@@ -89,7 +97,7 @@ Foundry はテキスト分析に *2 つのアプローチ* を提供します。
 
 **要約** はドキュメントの主要なポイントをより短いテキストに凝縮する方法です。
 
-1. チャット ペインの上部にある **New chat**（&#128172;）ボタンを使用して会話を再開します。これにより会話履歴がすべて削除されます。
+1. チャット ペインの上部にある **New chat（新しいチャット）**（&#128172;）ボタンを使用して会話を再開します。これにより会話履歴がすべて削除されます。
 1. 次のプロンプトを入力して結果を確認します。
 
     ```
@@ -121,16 +129,16 @@ Foundry はテキスト分析に *2 つのアプローチ* を提供します。
 
 2. *ビルド* ページで、左側のメニューから **サービス** を選択します。
 
-    ![新しい Foundry ポータルの AI サービス一覧のスクリーンショット。](./media/ai-services.JPG)
+    ![新しい Foundry ポータルの AI サービス一覧のスクリーンショット。](./media/ai-services.PNG)
 
 ### 言語の検出
 
 テキストが複数の言語のいずれかで記述されている可能性がある場合、分析ワークフローの最初のステップは、後続の処理に最も適切なモデルやエージェントにテキストをルーティングできるよう、主要言語を決定することです。
 
-1. AI サービスの一覧から **Azure Language - 言語検出** アナライザーを選択します。
-2. **入力テキスト** リストで提供されているサンプル ドキュメントの 1 つを選択します。次に **検出** ボタンを使用して、サンプルが書かれている言語を検出します。
+1. AI サービスの一覧から **Language** のタイルを選択します。言語サービスに関するプレイグラウンドの一覧が表示されたら **Language Detection** を選択してページを移動します。
+2. **入力テキスト** リストで提供されているサンプル ドキュメントの 1 つを選択します。次に **検出** ボタンを使用して、サンプルテキストに書かれている言語を検出します。
 
-    ![プレイグラウンドでの言語検出のスクリーンショット。](./media/language-detection-input.JPG)
+    ![プレイグラウンドでの言語検出のスクリーンショット。](./media/language-detection-input.PNG)
 
 3. 検出された言語の詳細を確認した後、**編集** ボタン アイコンをクリックして入力テキストを再度編集可能にします。これにより次のことができます。
     - 別のサンプルを選択する
@@ -145,13 +153,13 @@ Foundry はテキスト分析に *2 つのアプローチ* を提供します。
 
 4. 独自の入力でさらに実験してみましょう。
 
-5. 実験が終わったら、AI サービスの一覧に戻ります。プレイグラウンド画面上部の戻るボタンをクリックしてください。
+5. 実験が終わったら、言語サービスのプレイグラウンド一覧に戻ります。プレイグラウンド画面上部の戻るボタンをクリックしてください。
 
 ### テキスト内の PII を特定する
 
 プライバシー ポリシーや法律を遵守するため、組織は名前、住所、電話番号、メール アドレス、その他の個人的な詳細などの **個人を特定できる情報（PII）** を検出してマスクする必要があることが多いです。
 
-1. AI サービスの一覧から **Azure Language - テキスト PII マスキング** アナライザーを選択します。
+1. プレイグラウンドの一覧から **Text PII Redaction** を選択します。
 2. **入力テキスト** リストで提供されている **サンプル** ドキュメントリストから 1 つを選択します。次に **検出** ボタンを使用してテキスト内の PII 値を検出します。
 
     ![プレイグラウンドでの PII 検出結果のスクリーンショット。](./media/text-05.png)
@@ -173,54 +181,6 @@ Foundry はテキスト分析に *2 つのアプローチ* を提供します。
     - メール アドレス
     - 電話番号
     - 住所
-
-### サンプル コードを確認する
-
-Foundry は一部の Azure Language 機能のサンプル コードを提供しています。サンプル コードを使用して独自のクライアント アプリケーションの作成を始めることができます。
-
-> タイミングによってはこのタスクを実行できない（表示されない）場合があります
-
-1. 右側の **コード** タブを選択して PII 識別のサンプル コードを表示します。
-
-    ![プレイグラウンドで Code タブが開いているスクリーンショット。](./media/text-05-code.png)
-
->**ヒント**: 参考として以下に Python のサンプル コードを示します。コードをコピーして Visual Studio Code などの好みの Python 開発環境で実行できます。Azure Language のエンドポイントとキーの環境変数を作成する必要があります。これらはコード サンプル ウィンドウで確認できます。
-
-```python
-
-    key = "paste-your-key-here"
-    endpoint = "paste-your-endpoint-here"
-
-    from azure.ai.textanalytics import TextAnalyticsClient
-    from azure.core.credentials import AzureKeyCredential
-
-    # Authenticate the client using your key and endpoint 
-    def authenticate_client():
-        ta_credential = AzureKeyCredential(key)
-        text_analytics_client = TextAnalyticsClient(
-                endpoint=endpoint, 
-                credential=ta_credential)
-        return text_analytics_client
-
-    client = authenticate_client()
-
-    # Example method for detecting sensitive information (PII) from text 
-    def pii_recognition_example(client):
-        documents = [
-            "$documents"
-        ]
-        response = client.recognize_pii_entities(documents, language="en")
-        result = [doc for doc in response if not doc.is_error]
-        for doc in result:
-            print("Redacted Text: {}".format(doc.redacted_text))
-            for entity in doc.entities:
-                print("Entity: {}".format(entity.text))
-                print(" Category: {}".format(entity.category))
-                print(" Confidence Score: {}".format(entity.confidence_score))
-                print(" Offset: {}".format(entity.offset))
-                print(" Length: {}".format(entity.length))
-    pii_recognition_example(client)
-```
 
 ## まとめ
 
